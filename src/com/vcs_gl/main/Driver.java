@@ -41,6 +41,7 @@ public class Driver {
 				generatedPassword = ci.generatePassword(8).toString();
 				employee.setPassword(generatedPassword);
 				ci.showCredentials(employee);
+				break;
 			}
 			case 3: {
 				generatedEmail=ci.generateEmail(employee.getFirstName().toLowerCase(), 
@@ -49,6 +50,7 @@ public class Driver {
 				generatedPassword = ci.generatePassword(8).toString();
 				employee.setPassword(generatedPassword);
 				ci.showCredentials(employee);
+				break;
 			}
 			case 4:{
 				generatedEmail=ci.generateEmail(employee.getFirstName().toLowerCase(), 
