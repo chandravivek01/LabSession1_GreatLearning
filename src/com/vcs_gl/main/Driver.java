@@ -9,21 +9,27 @@ import com.vcs_gl.service.CredentialService;
 public class Driver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Creating Object of Employee Class with FirstName and LastName as arguments passed to its Constructor
 		Employee employee = new Employee("Vivek", "Chandra");
+		
+		// Creating a Reference of Credential Interface with Object of Credential Service
 		CredentialInterface ci = new CredentialService();
 		
+		// Declaring the rest of the Attributes of Employee Class
 		String generatedEmail=null;
 		String generatedPassword=null;
 		
+		// Prompting the User to Enter Input in to the Console
 		System.out.println("Enter the department from the following");
 		System.out.println("1. Technical");
 		System.out.println("2. Admin");
 		System.out.println("3. Human Resource");
 		System.out.println("4. Legal");
 		
+		// Accepting the Input from the Console 
 		Scanner sc = new Scanner(System.in);
-		int option = sc.nextInt();
+		int option = sc.nextInt();	
+		
 		switch(option) {
 			case 1:{
 					generatedEmail=ci.generateEmail(employee.getFirstName().toLowerCase(), 
